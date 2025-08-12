@@ -28,15 +28,7 @@ pipeline {
                 sh './gradlew test' // adjust for your tech stack
             }
         }
-        tools {
-    gradle 'MyGradle'
-}
-stage('Build') {
-    steps {
-        sh 'gradle build'
-    }
-}
-
+       
 
         stage('Deploy') {
             steps {
