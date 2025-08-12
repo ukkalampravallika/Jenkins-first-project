@@ -15,11 +15,12 @@ pipeline {
         }
 
         stage('Build') {
-            steps {
-                echo "Starting build..."
-                sh './gradlew build' // or mvn package, npm install, etc.
-            }
-        }
+    steps {
+        echo "Starting build..."
+        sh 'gradle build'
+    }
+}
+
 
         stage('Test') {
             steps {
